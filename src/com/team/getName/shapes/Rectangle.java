@@ -1,5 +1,7 @@
 package com.team.getName.shapes;
 
+import com.team.getName.exception.ShapeException;
+
 public class Rectangle extends Parallelogram {
 
 		
@@ -10,9 +12,9 @@ public class Rectangle extends Parallelogram {
 		
 	}
 	
-	public static boolean isRectangle(Quadrilateral rec){
+	public static boolean isRectangle(Quadrilateral rec) throws ShapeException{
 		if(rec.getL1().getLength() == rec.getL3().getLength() && rec.getL2().getLength() == rec.getL4().getLength()) return true;
-		else return false;
+		else throw new ShapeException();
 	}
 
 	@Override

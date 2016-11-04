@@ -20,8 +20,8 @@ public class Square extends Rectangle{
 	}
 	
 	public static boolean isSquare(Quadrilateral quad) throws ShapeException{
-		
-		if (quad.getL1() == quad.getL3() && quad.getL2() == quad.getL4()){
+				
+		if (quad.getL1().equals(quad.getL3()) && quad.getL2().equals(quad.getL4())){
 			return true;
 			
 		} else{
