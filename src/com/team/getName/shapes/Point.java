@@ -1,3 +1,4 @@
+package com.team.getName.shapes;
 
 public class Point {
 
