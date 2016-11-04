@@ -13,20 +13,23 @@ public abstract class Quadrilateral {
 	private Line l4;
 	
 	//Constructor
-	public Quadrilateral(Point p1, Point p2, Point p3, Point p4, Line l1, Line l2, Line l3, Line l4){
+	public Quadrilateral(Point p1, Point p2, Point p3, Point p4){
 		this.p1 = p1;
 		this.p2 = p2;
 		this.p3 = p3;
 		this.p4 = p4;
-		this.l1 = l1;
-		this.l2 = l2;
-		this.l3 = l3;
-		this.l4 = l4;
+		this.l1 = new Line(p1, p2);
+		this.l2 = new Line(p2, p3);
+		this.l3 = new Line(p3, p4);
+		this.l4 = new Line(p4, p1);
 	}
 	
 	//Interesting methods
-	public abstract double getPerimeter();
 	public abstract double getArea();
+	public double getPerimeter(){
+		double d = l1.getLength() + l2.getLength() + l3.getLength() + l4.getLength();
+		return d;
+	}
 
 	//Override toString method to show requested information about the shape
 	@Override

@@ -6,12 +6,13 @@ public class Square extends Rectangle{
 		return true;
 	}
 	
-	Square(){
+	public Square(){
 		
 	}
 	
-	public void getArea(){
-		
+	@Override
+	public double getArea(){
+		return 0;
 	}
 
 }
