@@ -9,11 +9,6 @@ import com.team.getName.shapes.Point;
 public class PointTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testDistanceTo(){
 		Point uno = new Point(1,1);
 		Point dos = new Point(5,5);
