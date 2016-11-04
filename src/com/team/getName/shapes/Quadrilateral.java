@@ -12,10 +12,23 @@ public abstract class Quadrilateral {
 	private Line l3;
 	private Line l4;
 	
+	//Constructor
+	public Quadrilateral(Point p1, Point p2, Point p3, Point p4, Line l1, Line l2, Line l3, Line l4){
+		this.p1 = p1;
+		this.p2 = p2;
+		this.p3 = p3;
+		this.p4 = p4;
+		this.l1 = l1;
+		this.l2 = l2;
+		this.l3 = l3;
+		this.l4 = l4;
+	}
+	
 	//Interesting methods
 	public abstract double getPerimeter();
 	public abstract double getArea();
 
+	//Override toString method to show requested information about the shape
 	@Override
 	public String toString(){
 		String s = "Point 1: " + p1 + "\n";
