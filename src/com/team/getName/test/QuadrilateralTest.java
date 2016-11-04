@@ -9,11 +9,17 @@ import com.team.getName.shapes.Quadrilateral;
 
 public class QuadrilateralTest {
 
-	@Test
-	public void getPerimeterTest() {
-		Quadrilateral q = new Quadrilateral(new Point(0,0), new Point(10,0), new Point(8,5), new Point(3.3, 5));
-		
-		fail("Not yet implemented");
-	}
+	//Works when quadrilateral is a concrete class
+	
+//	@Test
+//	public void getPerimeterTest() {
+//		Quadrilateral q = new Quadrilateral(new Point(0,0), new Point(10,0), new Point(8,5), new Point(3.3, 5));
+//		
+//		double expected = 26.08;
+//		double actual = q.getPerimeter();
+//		
+//		assertEquals(expected, actual, 0.01);
+//	}
+	
 
 }
