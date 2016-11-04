@@ -15,7 +15,7 @@ public class Point {
 	public double distanceTo(Point p){
 		double xdif = this.xpos - p.xpos;
 		double ydif = this.ypos - p.ypos;
-		return Math.sqrt(xdif*xdif+ydif*ydif);
+		return Math.sqrt(Math.pow(xdif, 2)+Math.pow(ydif, 2));
 	}
 	
 
