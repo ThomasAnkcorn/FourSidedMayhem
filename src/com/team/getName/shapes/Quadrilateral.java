@@ -27,7 +27,8 @@ public abstract class Quadrilateral {
 	//Interesting methods
 	public abstract double getArea();
 	public double getPerimeter(){
-		double d = l1.getLength() + l2.getLength() + l3.getLength() + l4.getLength();
+		double d = l1.getLength();// + getL2().getLength() + getL3().getLength() + getL4().getLength();
+		System.out.println(d);
 		return d;
 	}
 
@@ -45,10 +46,12 @@ public abstract class Quadrilateral {
 		s+= "Line 4 length: " + l4.getLength() + "\n";
 		
 		s+= "Area: " + getArea() + "\n";
-		s+= "Permieter: " + getPerimeter();
+		s+= "Perimeter: " + this.getPerimeter();
 		
 		return s;
 	}	
+	
+	
 	
 	//Getters and Setters
 	public Point getP1() {
