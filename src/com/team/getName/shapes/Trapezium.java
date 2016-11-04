@@ -43,9 +43,13 @@ public class Trapezium extends Quadrilateral {
 	
 
 	public static boolean isTrapezium(Quadrilateral quad) {
-		   
-		
-		return false;
+		if (quad.getL1().getSlope() == quad.getL3().getSlope() && quad.getL1().getLength() != quad.getL3().getLength()) {
+			return true;
+		} else if (quad.getL2().getSlope() == quad.getL4().getSlope() && quad.getL2().getLength() != quad.getL4().getLength()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	private void calculate4Sides() {
