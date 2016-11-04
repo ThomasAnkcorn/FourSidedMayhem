@@ -3,44 +3,48 @@ package com.team.getName.shapes;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.experimental.theories.Theories;
+
 public class Trapezium extends Quadrilateral {
 	private double longBase;
 	private double shortBase;
 	private double slantingSide1;
 	private double slantingSide2;
 
-	Trapezium(Point point1, Point point2, Point point3, Point point4) {
+	public Trapezium(Point point1, Point point2, Point point3, Point point4) {
 		super(point1, point2, point3, point4);
 
-		/*
-		 * double slopes[] = { slopes.add(quad.getL1().getSlope()); }
-		 * slopes.add(quad.getL2().getSlope());
-		 * slopes.add(quad.getL3().getSlope());
-		 * slopes.add(quad.getL4().getSlope());
-		 */
-
-		/*
-		 * for () {
-		 * 
-		 * } switch() { case: 0 {
-		 * 
-		 * break; } }
-		 */
-		// if (quad.getL1().getSlope() == 0) {
-
-		// }
-
-		/*
-		 * if (isTrapezium(quad) == true ) { >>>>>>>
-		 * 1ba495767a5d41b404b1e240d9899b4b905b9990 this.longBase =
-		 * quad.getL1().getLength(); this.shortBase = quad.getL2().getLength();
-		 * this.slantingSide1 = quad.getL3().getLength(); this.slantingSide2 =
-		 * quad.getL4().getLength(); }
-		 */
+		if (getL1().getSlope() == getL3().getSlope()) {
+			if (getL1().getLength() > getL3().getLength()) {
+				 this.longBase = getL1().getLength();
+				 this.shortBase = getL3().getLength();
+			} else {
+				 this.longBase = getL3().getLength();
+				 this.shortBase = getL1().getLength();
+			}
+			this.slantingSide1 = getL2().getLength();
+			this.slantingSide2 = getL4().getLength();
+		} else {
+			if (getL2().getLength() > getL4().getLength()) {
+				 this.longBase = getL2().getLength();
+				 this.shortBase = getL4().getLength();
+			} else {
+				 this.longBase = getL4().getLength();
+				 this.shortBase = getL2().getLength();
+			}
+			this.slantingSide1 = getL1().getLength();
+			this.slantingSide2 = getL3().getLength();
+		}
+		
+		
+		
 	}
 
-	public static boolean isTrapezium(Quadrilateral quad) {
+	
 
+	public static boolean isTrapezium(Quadrilateral quad) {
+		   
+		
 		return false;
 	}
 
@@ -49,8 +53,16 @@ public class Trapezium extends Quadrilateral {
 	}
 
 	public double getArea() {
-
-		double area = 0;
+		double height;
+		double area;
+		
+		height = this.getP1().getYpos() - this.getP3().getYpos();
+		if (height < 0) {
+			height = this.getP3().getYpos() - this.getP1().getYpos();
+		}
+		
+		area = ((shortBase + longBase) / 2 ) * height;
+		System.out.println("shortbase = " + shortBase + " longbase = " + longBase + "height = " + height);	
 		return area;
 	}
 
