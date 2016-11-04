@@ -33,10 +33,20 @@ public class Line {
 		
 	}
 		
-	public void getSlope(){
+	public double getSlope(){
 		
+		double diffX = p1.getXpos() - p2.getXpos();
+		double diffY = p1.getYpos() - p2.getYpos();
 		
+		if (p1.getXpos() == p2.getXpos()){
+			return Double.POSITIVE_INFINITY;
+		} else {
 			
+			double slope = diffY / diffX;
+			return slope;
+		}
+		
+		
 		
 	}
 	

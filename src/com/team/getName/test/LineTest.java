@@ -40,9 +40,34 @@ public class LineTest {
 	
 	@Test
 	public void getSlopeTest(){
+		Point p1 = new Point(3, 3);
+		Point p2 = new Point(3, 9);
 		
+		Line line = new Line(p1, p2);
+		
+		
+		double expected = Double.POSITIVE_INFINITY;
+		double actual = line.getSlope();
+		
+		assertEquals("Test the slope", expected, actual, 0.1);
 		
 	}
+	
+	@Test
+	public void getSlopeTest1(){
+		Point p1 = new Point(10, 10);
+		Point p2 = new Point(5, 15);
+		
+		Line line = new Line(p1, p2);
+		
+		
+		double expected = -1;
+		double actual = line.getSlope();
+		
+		assertEquals("Test the slope", expected, actual, 0.1);
+		
+	}
+	
 	
 	
 
