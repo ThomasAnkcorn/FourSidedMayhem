@@ -3,7 +3,7 @@ package com.team.getName.shapes;
 public class Parallelogram extends Trapezium{
 
 	
-		public boolean isParallelogram(){
+		private boolean isParallelogram(){
 			return true;
 		}
 		
