@@ -14,8 +14,8 @@ public class Point {
 	}
 	
 	
-	public void distanceTo(){
-		
+	public double distanceTo(){
+		return 0;
 	}
 	
 	public void setXpos(double xpos) {
