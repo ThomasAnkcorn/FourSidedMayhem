@@ -12,8 +12,8 @@ public class Rectangle extends Parallelogram {
 		return false;
 	}
 	
-	public double getArea(){
-		return 0;
+	public void getArea(){
+		
 	}
 	
 }
