@@ -6,7 +6,7 @@ public class Trapezium {
 	private double slantingSide1;
 	private double slantingSide2;
 	
-	public Trapezium(Object trap) {
+	public Trapezium() {
 		//trap.longBase = this.longBase;
 		//trap.shortBase = this.shortBase;
 		//trap.slantingSide1 = this.slantingSide1;
@@ -21,8 +21,8 @@ public class Trapezium {
 		
 	}
 	
-	public void getArea() {
-		
+	public double getArea() {
+		return 0;
 	}
 	
 	

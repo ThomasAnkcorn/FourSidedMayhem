@@ -12,7 +12,7 @@ public class Parallelogram extends Trapezium{
 		}
 
 
-		public double getArea(Parallelogram p){
+		public double getArea(){
 			return 0;
 		}
 }
