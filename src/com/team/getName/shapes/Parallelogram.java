@@ -8,6 +8,8 @@ public class Parallelogram extends Trapezium{
 		}
 		
 		public Parallelogram() {
+			
+			super(null, null, null, null);
 			// TODO Auto-generated constructor stub
 		}
 
