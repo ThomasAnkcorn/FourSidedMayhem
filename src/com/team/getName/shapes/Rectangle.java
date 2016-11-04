@@ -11,9 +11,10 @@ public class Rectangle extends Parallelogram {
 	private boolean isRectangle(){
 		return false;
 	}
+
 	
 	public void getArea(){
 		
 	}
-	
+
 }

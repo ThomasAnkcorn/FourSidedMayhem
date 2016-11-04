@@ -7,7 +7,9 @@ public class Parallelogram extends Trapezium{
 			return true;
 		}
 		
-		Parallelogram(){}
+		public Parallelogram() {
+			// TODO Auto-generated constructor stub
+		}
 
 
 		public double getArea(Parallelogram p){
