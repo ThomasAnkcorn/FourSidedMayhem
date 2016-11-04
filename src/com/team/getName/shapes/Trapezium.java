@@ -70,7 +70,7 @@ public class Trapezium extends Quadrilateral {
 
 	@Override
 	public double getPerimeter() {
-		double d = getL1().getLength() + getL2().getLength() + getL3().getLength();
+		double d = getL1().getLength() + getL2().getLength() + getL3().getLength() +getL4().getLength();
 
 		return d;
 	}

@@ -28,7 +28,7 @@ public abstract class Quadrilateral {
 	public abstract double getArea();
 
 	public double getPerimeter() {
-		double d = getL1().getLength() + getL2().getLength() + getL3().getLength();
+		double d = getL1().getLength() + getL2().getLength() + getL3().getLength() +getL4().getLength(); 
 
 		return d;
 	}
