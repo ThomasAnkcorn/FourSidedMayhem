@@ -12,9 +12,9 @@ public class Rectangle extends Parallelogram {
 		return false;
 	}
 
-	@Override
-	public double getArea(){
-		return 0.0;
-	}
 	
+	public void getArea(){
+		
+	}
+
 }

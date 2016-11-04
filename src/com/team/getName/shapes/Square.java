@@ -10,8 +10,8 @@ public class Square extends Rectangle{
 		
 	}
 	
-	public double getArea(){
-		return 0;
+	public void getArea(){
+		
 	}
 
 }
