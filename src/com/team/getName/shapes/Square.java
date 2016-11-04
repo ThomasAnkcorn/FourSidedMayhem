@@ -3,7 +3,8 @@ package com.team.getName.shapes;
 public class Square extends Rectangle{
 	
 	private boolean isSquare(){
-		return true;
+		if(l1.getLength() == l3.getLength() == l2.getLenth() == l4.getLenth())return true;
+		else return false;
 	}
 	
 	public Square(){
@@ -12,7 +13,7 @@ public class Square extends Rectangle{
 	
 	@Override
 	public double getArea(){
-		return 0;
+		return Math.pow(l1, 2);
 	}
 
 }
