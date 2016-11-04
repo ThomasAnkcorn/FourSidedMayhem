@@ -5,7 +5,7 @@ public class Point {
 	private double xpos;
 	private double ypos;
 	
-	Point(double xpos, double ypos){
+	public Point(double xpos, double ypos){
 		this.xpos = xpos;
 		this.ypos = ypos;
 	}
