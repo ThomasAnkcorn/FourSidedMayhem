@@ -7,10 +7,8 @@ public class Line {
 	
 	
 	public Line(Point p1, Point p2){
-		
 		this.p1 = p1;
 		this.p2 = p2;
-		
 	}
 	
 	
@@ -29,15 +27,25 @@ public class Line {
 	}
 
 	public double getLength(){
-		//use distanceTo method
-		//return length of the line
-		return 0;
+		
+		double length = p1.distanceTo(p2);
+		return length;
 		
 	}
-	
-	
-	public void getSlope(){
-		//calculate gradient of the line
+		
+	public double getSlope(){
+		
+		double diffX = p1.getXpos() - p2.getXpos();
+		double diffY = p1.getYpos() - p2.getYpos();
+		
+		if (p1.getXpos() == p2.getXpos()){
+			return Double.POSITIVE_INFINITY;
+		} else {
+			
+			double slope = diffY / diffX;
+			return slope;
+		}
+		
 		
 		
 	}

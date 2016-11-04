@@ -43,6 +43,24 @@ public class PointTest {
 		assertEquals("Does the constructor work for y?",expected,actual, 0.1);
 	}
 	
+	@Test
+	public void testPrintXpos(){
+		Point test = new Point(2,2);
+		String expected = "2.00";
+		String actual = test.printXpos();
+		assertEquals("X string is correct format",expected,actual);
+		
+	}
+	
+	@Test
+	public void testPrintYpos(){
+		Point test = new Point(2,2);
+		String expected = "2.00";
+		String actual = test.printYpos();
+		assertEquals("Y string is correct format",expected,actual);
+		
+	}
+	
 	
 	
 }
