@@ -4,15 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.team.getName.exception.ShapeException;
 import com.team.getName.shapes.Point;
 import com.team.getName.shapes.Rectangle;
 
 public class RectangleTest {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
 	
 	@Test
 	public void testIsRectangle(){
@@ -22,7 +19,13 @@ public class RectangleTest {
 		Point p4 = new Point(1,3);
 		Rectangle rec = new Rectangle(p1,p2,p3,p4);
 		boolean expected = true;
-		boolean actual = Rectangle.isRectangle(rec);
+		boolean actual = false;
+		try {
+			actual = Rectangle.isRectangle(rec);
+		} catch (ShapeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		assertEquals(expected, actual);
 	}
 	
