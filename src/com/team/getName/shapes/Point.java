@@ -43,8 +43,8 @@ public class Point {
 	}
 	
 	
-	public String toString(Point p){
-		return "A Point with x = "+p.printXpos()+" and y = "+p.printYpos()+"!";
+	public String toString(){
+		return "("+printXpos()+","+printYpos()+")";
 	}
 
 

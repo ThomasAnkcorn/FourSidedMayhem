@@ -34,10 +34,10 @@ public abstract class Quadrilateral {
 	//Override toString method to show requested information about the shape
 	@Override
 	public String toString(){
-		String s = "Point 1: " + p1 + "\n";
-		s+= "Point 2: " + p2 + "\n";
-		s+= "Point 3: " + p3 + "\n";
-		s+= "Point 4: " + p4 + "\n";
+		String s = "Point 1: " + p1.toString()+ "\n";
+		s+= "Point 2: " + p2.toString() + "\n";
+		s+= "Point 3: " + p3.toString() + "\n";
+		s+= "Point 4: " + p4.toString() + "\n";
 
 		s+= "Line 1 length: " + l1.getLength() + "\n";
 		s+= "Line 2 length: " + l2.getLength() + "\n";
