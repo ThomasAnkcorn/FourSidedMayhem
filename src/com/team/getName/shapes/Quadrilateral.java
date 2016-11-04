@@ -25,8 +25,11 @@ public abstract class Quadrilateral {
 	}
 	
 	//Interesting methods
-	public abstract double getPerimeter();
 	public abstract double getArea();
+	public double getPerimeter(){
+		double d = l1.getLength() + l2.getLength() + l3.getLength() + l4.getLength();
+		return d;
+	}
 
 	//Override toString method to show requested information about the shape
 	@Override
