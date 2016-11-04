@@ -2,6 +2,11 @@ package com.team.getName.shapes;
 
 public class Parallelogram extends Trapezium{
 
+		public Parallelogram(Point p1, Point p2, Point p3, Point p4) {
+		
+			super(p1,p2,p3,p4);
+		
+		}
 	
 		public static boolean isParallelogram(Quadrilateral quad){
 			
@@ -15,11 +20,7 @@ public class Parallelogram extends Trapezium{
 			return false;
 		}
 		
-		public Parallelogram(Point p1, Point p2, Point p3, Point p4) {
-			
-			super(p1,p2,p3,p4);
-			
-		}
+		
 
 
 		public double getArea(){
