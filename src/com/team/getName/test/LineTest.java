@@ -18,9 +18,32 @@ public class LineTest {
 		
 		double expected = p1.getXpos();
 		double actual = line.getP1().getXpos();
-		assertEquals("Test", expected, actual, 0.1);
+		assertEquals("Test the line constructor", expected, actual, 0.1);
+		
+	}
+	
+	@Test
+	public void getLengthTest(){
+		Point p1 = new Point(1.0, 1.0);
+		Point p2 = new Point(2.0, 2.0);
+		
+		Line line = new Line(p1, p2);
+		
+		double expected = p1.distanceTo(p2);
+		
+		double actual = line.getLength();
+		
+		assertEquals("Test the length of the side", expected, actual, 0.1);
+		
+	}
+	
+	
+	@Test
+	public void getSlopeTest(){
 		
 		
 	}
+	
+	
 
 }

@@ -27,14 +27,16 @@ public class Line {
 	}
 
 	public double getLength(){
-		return 0;
+		
+		double length = p1.distanceTo(p2);
+		return length;
 		
 	}
-	
-	
+		
 	public void getSlope(){
 		
 		
+			
 		
 	}
 	
