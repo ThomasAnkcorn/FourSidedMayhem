@@ -18,16 +18,20 @@ public abstract class Quadrilateral {
 
 	@Override
 	public String toString(){
-		System.out.println("Point 1: " + p1);
-		System.out.println("Point 2: " + p2);
-		System.out.println("Point 3: " + p3);
-		System.out.println("Point 4: " + p4);
-		System.out.println("Line 1 length: " + l1.getLength());
-		System.out.println("Line 1 length: " + l2.getLength());
-		System.out.println("Line 1 length: " + l3.getLength());
-		System.out.println("Line 1 length: " + l4.getLength());
-		System.out.println("Area: " + getArea());
-		System.out.println("Permieter: " + getPerimeter());
+		String s = "Point 1: " + p1 + "\n";
+		s+= "Point 2: " + p2 + "\n";
+		s+= "Point 3: " + p3 + "\n";
+		s+= "Point 4: " + p4 + "\n";
+
+		s+= "Line 1 length: " + l1.getLength() + "\n";
+		s+= "Line 2 length: " + l2.getLength() + "\n";
+		s+= "Line 3 length: " + l3.getLength() + "\n";
+		s+= "Line 4 length: " + l4.getLength() + "\n";
+		
+		s+= "Area: " + getArea() + "\n";
+		s+= "Permieter: " + getPerimeter();
+		
+		return s;
 	}	
 	
 	//Getters and Setters
