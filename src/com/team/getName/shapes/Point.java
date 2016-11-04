@@ -15,11 +15,10 @@ public class Point {
 	public double distanceTo(Point p){
 		double xdif = this.xpos - p.xpos;
 		double ydif = this.ypos - p.ypos;
-	
-		
 		return Math.sqrt(xdif*xdif+ydif*ydif);
 	}
 	
+
 	public double getXpos() {
 		return xpos;
 	}

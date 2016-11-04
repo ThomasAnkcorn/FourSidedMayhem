@@ -7,10 +7,8 @@ public class Line {
 	
 	
 	public Line(Point p1, Point p2){
-		
 		this.p1 = p1;
 		this.p2 = p2;
-		
 	}
 	
 	
@@ -29,16 +27,16 @@ public class Line {
 	}
 
 	public double getLength(){
-		//use distanceTo method
-		//return length of the line
-		return 0;
+		
+		double length = p1.distanceTo(p2);
+		return length;
 		
 	}
-	
-	
-	public void getSlope(){
-		//calculate gradient of the line
 		
+	public void getSlope(){
+		
+		
+			
 		
 	}
 	
