@@ -2,7 +2,7 @@ package com.team.getName.shapes;
 
 public abstract class Quadrilateral {
 
-	//Attributes
+	// Attributes
 	private Point p1;
 	private Point p2;
 	private Point p3;
@@ -11,9 +11,9 @@ public abstract class Quadrilateral {
 	private Line l2;
 	private Line l3;
 	private Line l4;
-	
-	//Constructor
-	public Quadrilateral(Point p1, Point p2, Point p3, Point p4){
+
+	// Constructor
+	public Quadrilateral(Point p1, Point p2, Point p3, Point p4) {
 		this.p1 = p1;
 		this.p2 = p2;
 		this.p3 = p3;
@@ -23,37 +23,36 @@ public abstract class Quadrilateral {
 		this.l3 = new Line(p3, p4);
 		this.l4 = new Line(p4, p1);
 	}
-	
-	//Interesting methods
+
+	// Interesting methods
 	public abstract double getArea();
-	public double getPerimeter(){
-		double d = l1.getLength();// + getL2().getLength() + getL3().getLength() + getL4().getLength();
-		System.out.println(d);
+
+	public double getPerimeter() {
+		double d = getL1().getLength() + getL2().getLength() + getL3().getLength();
+
 		return d;
 	}
 
-	//Override toString method to show requested information about the shape
+	// Override toString method to show requested information about the shape
 	@Override
-	public String toString(){
-		String s = "Point 1: " + p1.toString()+ "\n";
-		s+= "Point 2: " + p2.toString() + "\n";
-		s+= "Point 3: " + p3.toString() + "\n";
-		s+= "Point 4: " + p4.toString() + "\n";
+	public String toString() {
+		String s = "Point 1: " + p1.toString() + "\n";
+		s += "Point 2: " + p2.toString() + "\n";
+		s += "Point 3: " + p3.toString() + "\n";
+		s += "Point 4: " + p4.toString() + "\n";
 
-		s+= "Line 1 length: " + l1.getLength() + "\n";
-		s+= "Line 2 length: " + l2.getLength() + "\n";
-		s+= "Line 3 length: " + l3.getLength() + "\n";
-		s+= "Line 4 length: " + l4.getLength() + "\n";
-		
-		s+= "Area: " + getArea() + "\n";
-		s+= "Perimeter: " + this.getPerimeter();
-		
+		s += "Line 1 length: " + l1.getLength() + "\n";
+		s += "Line 2 length: " + l2.getLength() + "\n";
+		s += "Line 3 length: " + l3.getLength() + "\n";
+		s += "Line 4 length: " + l4.getLength() + "\n";
+
+		s += "Area: " + getArea() + "\n";
+		s += "Perimeter: " + getPerimeter();
+
 		return s;
-	}	
-	
-	
-	
-	//Getters and Setters
+	}
+
+	// Getters and Setters
 	public Point getP1() {
 		return p1;
 	}

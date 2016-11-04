@@ -16,36 +16,34 @@ public class Trapezium extends Quadrilateral {
 
 		if (getL1().getSlope() == getL3().getSlope()) {
 			if (getL1().getLength() > getL3().getLength()) {
-				 this.longBase = getL1().getLength();
-				 this.shortBase = getL3().getLength();
+				this.longBase = getL1().getLength();
+				this.shortBase = getL3().getLength();
 			} else {
-				 this.longBase = getL3().getLength();
-				 this.shortBase = getL1().getLength();
+				this.longBase = getL3().getLength();
+				this.shortBase = getL1().getLength();
 			}
 			this.slantingSide1 = getL2().getLength();
 			this.slantingSide2 = getL4().getLength();
 		} else {
 			if (getL2().getLength() > getL4().getLength()) {
-				 this.longBase = getL2().getLength();
-				 this.shortBase = getL4().getLength();
+				this.longBase = getL2().getLength();
+				this.shortBase = getL4().getLength();
 			} else {
-				 this.longBase = getL4().getLength();
-				 this.shortBase = getL2().getLength();
+				this.longBase = getL4().getLength();
+				this.shortBase = getL2().getLength();
 			}
 			this.slantingSide1 = getL1().getLength();
 			this.slantingSide2 = getL3().getLength();
 		}
-		
-		
-		
+
 	}
 
-	
-
 	public static boolean isTrapezium(Quadrilateral quad) {
-		if (quad.getL1().getSlope() == quad.getL3().getSlope() && quad.getL1().getLength() != quad.getL3().getLength()) {
+		if (quad.getL1().getSlope() == quad.getL3().getSlope()
+				&& quad.getL1().getLength() != quad.getL3().getLength()) {
 			return true;
-		} else if (quad.getL2().getSlope() == quad.getL4().getSlope() && quad.getL2().getLength() != quad.getL4().getLength()) {
+		} else if (quad.getL2().getSlope() == quad.getL4().getSlope()
+				&& quad.getL2().getLength() != quad.getL4().getLength()) {
 			return true;
 		} else {
 			return false;
@@ -59,21 +57,22 @@ public class Trapezium extends Quadrilateral {
 	public double getArea() {
 		double height;
 		double area;
-		
+
 		height = this.getP1().getYpos() - this.getP3().getYpos();
 		if (height < 0) {
 			height = this.getP3().getYpos() - this.getP1().getYpos();
 		}
-		
-		area = ((shortBase + longBase) / 2 ) * height;
-		System.out.println("shortbase = " + shortBase + " longbase = " + longBase + "height = " + height);	
+
+		area = ((shortBase + longBase) / 2) * height;
+		System.out.println("shortbase = " + shortBase + " longbase = " + longBase + "height = " + height);
 		return area;
 	}
 
 	@Override
 	public double getPerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		double d = getL1().getLength() + getL2().getLength() + getL3().getLength();
+
+		return d;
 	}
 
 	public double getLongBase() {

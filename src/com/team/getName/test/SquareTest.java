@@ -13,28 +13,25 @@ public class SquareTest {
 
 	@Test
 	public void isSquareTest() {
-		
-		Point p1 = new Point(10,10);
-		Point p2 = new Point(10,10);
-		Point p3 = new Point(10,10);
-		Point p4 = new Point(10,10);
-		
+
+		Point p1 = new Point(10, 10);
+		Point p2 = new Point(10, 10);
+		Point p3 = new Point(10, 10);
+		Point p4 = new Point(10, 10);
+
 		Square quad = new Square(p1, p2, p3, p4);
-		
+
 		boolean expected = true;
 		boolean actual = false;
-		
+
 		try {
-			actual =  Square.isSquare(quad);
+			actual = Square.isSquare(quad);
 		} catch (ShapeException e) {
 			e.printStackTrace();
 		}
-		
-		assertEquals("", expected, actual);
-		
-		
-		
-	}
 
+		assertEquals("", expected, actual);
+
+	}
 
 }
